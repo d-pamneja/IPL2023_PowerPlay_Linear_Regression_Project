@@ -44,7 +44,7 @@ Hence, we will use **Stacking Regresor** to make predictions.
 1. We can also use the voting regressor as well. However, since 
 stacking has a lower MAE in train data set and the error on test dataset is marginally high than voting regressor, we will go for that.
 
-2. Kindly note that either of the two models i.e. Voting and Stacking Regressor could be the ideal model.
+2. Kindly note that either of the two models i.e. Voting and Stacking Regressor could be the ideal model as per my analysis.
 
 ## Final Test Error
 The final test error (MAE) is : **8.579578436102235**.
