@@ -84,35 +84,22 @@ Ultimately, the Stacking Regressor emerged as the chosen model for predictions d
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
+<!-- Data Description -->
+## Data Description
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+1. **Training data**: You will be provided two files for training data, they are as following:
+    * **IPL_Ball_by_Ball_2008_2022.csv**: This file contains a ball by ball record of each IPL match since 2008 to 2022. The column names are self explanatory. 
+    * **IPL_Matches_Result_2008_2022.csv**: This file contains results of each IPL match since 2008 to 2022. The column names are self explanatory. 
 
-### Prerequisites
+The data can be found in the link given [here](https://www.kaggle.com/datasets/vora1011/ipl-2008-to-2021-all-match-dataset).
 
-The complete WebApp runs only on Linux system. Please download the Mail Hog application (Fake SMTP server) for your system, not be linux version. One can run the full WebApp in WSL and run the MailHog server in Windows.
+### Evaluation Metric
+Here, the data has been evaluated using mean absolute error. The choice of the mean absolute error (MAE) as the evaluation metric for regression problems is rooted in its intuitive and straightforward interpretation. MAE calculates the average absolute differences between predicted and actual values, providing a clear and easily understandable measure of the model's accuracy. 
 
+Unlike other metrics such as mean squared error (MSE), MAE does not heavily penalize large errors, making it more robust to outliers and ensuring that each prediction's impact on the overall evaluation is proportional to its magnitude.This property makes MAE particularly suitable for regression scenarios where the emphasis is on understanding the average magnitude of prediction errors without being overly influenced by extreme values. 
 
-### Installation
+In essence, the simplicity and resilience of MAE make it a reliable choice for assessing the predictive performance of regression models in a manner that aligns with a practical understanding of the errors.
 
-Before we could use the web app, we need to setup the environment and servers for it.
-1) <b>Setting up the Flask server :</b>   
-   - In a new Linux terminal tab, start the Flask server by typing 
-
-             python3 app.py
-
-2) <b> Setting up Redis server : </b>    
-    - In a new Linux terminal tab, start the redis server by typing 
-
-          redis-server
-    
-3) <b> Setting up Celery Worker and Celery Beat : </b>
-    - In a new Linux terminal tab, start the Celery Workers and Beat together by typing 
-    
-          Celery -A celery_task.celery worker -l info -B    
-   
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
