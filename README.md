@@ -49,7 +49,7 @@
       </ul>
     </li>
     <li><a href="#models-evaluated">Models Evaluated</a></li>
-    <li><a href="#final-test-error">Final Test Error</a></li>
+    <li><a href="#model-performance">Model Performance</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -105,36 +105,51 @@ In essence, the simplicity and resilience of MAE make it a reliable choice for a
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- MODELS EVALUATED -->
+## Models Evaluated
+Here,in this project I have evaluated the performance of the following models:
 
-Below given are some additional screenshots of multiple pages of the application which can be accessed based on the basis of the level of control i.e. Admin, Store Manager or User.
+* Ridge 
+* Lasso 
+* Linear Regression
+* SGD Regressor
+* Bayesion Ridge
+* Kernel Ridge
+* HistGradientBoostingRegressor
+* MLPRegressor
+* ExtraTreesRegressor
+* BaggingRegressor
+* RandomForestRegressor
+* AdaBoostRegressor
+* GradientBoostingRegressor
+* XGBRegressor
+* LGBMRegressor
 
-1) <strong>Admin</strong>
-    [![Product Admin Dashboard Screen Shot][product-admin-dashboard-screenshot]](https://example.com)
-    - Above given is the admin dashboard, from where the admin can :
-        - Perform the CRUD operations on the categories
-        - Manage pending category requests made by the store managers
-        - Select the preference of the monthly user report
-        [![Product Admin Monthly Report Screen Shot][product-admin-monthly-report-screenshot]](https://example.com)
-2) <strong>Store Manager</strong>
-    [![Product Manager Dashboard Screen Shot][product-manager-dashboard-screenshot]](https://example.com)
-    - Above given is the store manager dashboard, from where the managers can :
-        - Perform the CRUD operations on the products
-        - Creating and sending category requests to the admins
-        - Generate the products csv and receive the same on registered mail
-        [![Product CSV Report Screen Shot][product-csv-report-screenshot]](https://example.com)
-3) <strong>User</strong>
-    [![Product User Dashboard Screen Shot][product-user-dashboard-screenshot]](https://example.com)
-    - Above given is the user dashboard, from where the user can :
-        - Sort products based on filters and/or categories
-        - Buy products from one and/or multiple categories
-        - View cart and continue with completing the purchase
-        - Viewing the order history
+Apart from that, I have also tried ensemble models, such as:
+
+* VotingRegressor
+* StackingRegressor
+
+## Model Used 
+Hence, we will use **Stacking Regresor** to make predictions. 
+
+1. We can also use the voting regressor as well. However, since 
+stacking has a lower MAE in train data set and the error on test dataset is marginally high than voting regressor, we will go for that.
+
+2. Kindly note that either of the two models i.e. Voting and Stacking Regressor could be the ideal model as per my analysis.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- MODEL PERFORMANCE -->
+## Models Performance
+
+The final test error, measured by Mean Absolute Error (MAE), stands at **8.5796**. This value represents the average absolute difference between the predicted and actual powerplay runs in the IPL matches. A lower MAE indicates better model accuracy, and in this context, the achieved MAE suggests that, on average, the model's predictions deviate by approximately 8.58 runs from the actual powerplay run values. 
+
+While the current model performance is a good starting point, there is always room for improvement. It is ideal to consider experimenting with different features, tuning hyperparameters, or exploring more advanced models to further enhance predictive accuracy. Regular model evaluation and refinement can contribute to achieving even lower MAE values, resulting in more precise predictions for powerplay runs in IPL matches.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
