@@ -77,7 +77,7 @@ Ultimately, the Stacking Regressor emerged as the chosen model for predictions d
 ### Built With
 
 * [![pandas][Pandas]][Pandas-url]
-* [![sckit-learn][scikit-learn]][sckit-learn-url]
+* [![scikit-learn][scikit-learn]][scikit-learn-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
