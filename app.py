@@ -5,8 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.set_page_config(page_title="IPL_Regression", page_icon=":chart_increasing:", layout="wide")
-
-## HEADER 
+ 
 st.title('IPL Score Prediction')
 st.header('Predicting the score of the powerplay in both innings of an IPL match')
 st.write('The aim of this project is to predict the runs that will be scored in the powerplay of each innings, given the infomration of the venue, batting an bowling team for that innings, and the players which participated in the given overs.')
@@ -112,10 +111,8 @@ if st.button('Run Prediction'):
     
     main_page = st.empty()
 
-    # Run prediction
     get_prediction()
 
-    # Display prediction result
     main_page.title('Prediction Results')
     display_predictions()
     
@@ -125,5 +122,5 @@ if st.button('Run Prediction'):
         st.rerun()
     
     
-st.markdown('---')  # Horizontal line for separation
+st.markdown('---')
 st.markdown('Reach out to me at [LinkedIn](https://www.linkedin.com/in/dhruv-pamneja-3b8432187/),[GitHub](https://github.com/d-pamneja) or [Email](mailto:dpamneja@gmailcom)') 
